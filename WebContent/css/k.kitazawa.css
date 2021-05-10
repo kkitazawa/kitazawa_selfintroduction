@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+title, h1, h4, p {
+	font-family: 'Spartan', sans-serif;
+}
+
+title, h1, h2, h4, span, p {
+	color: #736d71;
+}
+
+.title {
+	text-align: center;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+li {
+	display: flex;
+	width: 50%;
+	text-align: center;
+}
+
+h1 {
+	font-size: 150%;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
+
+body {
+	background-color: #f5deb3;
+	z-index: -2;
+}
+
+.floatBtn {
+	border: 1px solid #ccc;
+	color: #333;
+	padding: 10px 20px;
+	display: inline-block;
+	text-decoration: none;
+	outline: none;
+	/*アニメーションの指定*/
+	transition: all .3s;
+}
+
+/*hoverをしたらボックスに影がつく*/
+.floatBtn:hover {
+	box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+	border-color: transparent;
+}
+
+.floatBtn {
+	position: relative; /* 今の位置を基準 */
+	top: 550px;
+	border-radius: 0.3125em;
+	text-decoration: none;
+	outline: none;
+}
+
+.grid {
+	columns: 4; /*段組みの数*/
+	padding: 0 15px; /*ギャラリー左右に余白をつける*/
+	margin: 0;
+}
+
+.grid li {
+	margin-bottom: 20px; /*各画像下に余白をつける*/
+	list-style: none;
+}
+/*ギャラリー内のイメージは横幅100%にする*/
+.topPage {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom; /*画像の下にできる余白を削除*/
+}
+/*　横幅900px以下の段組み設定　*/
+@media only screen and (max-width: 900px) {
+	.gallery {
+		columns: 3;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.gallery {
+		columns: 2;
+	}
+}
+
+#music p {
+	display: flex; /*inline-blockにします*/
+	width: 80px;
+}
+
+#movie {
+	display: inline-block; /*inline-blockにします*/
+	width: 80px;
+}
+
+#videoGame {
+	display: inline-block; /*inline-blockにします*/
+	width: 80px;
+}
+
+.musician, .yougaku, .hougaku {
+	display: inlie-block; /*inline-blockにします*/
+	width: 400px;
+	text-align: center;
+	padding: 0px 127px 0px;
+}
+
+.ojigiImage {
+	width: 70%;
+	height: 70%;
+	padding: 80px 100px 0px;
+}
+
+.musicImage {
+	width: 40%;
+	height: 60%;
+	border-radius: 0.3125em;
+	padding: 0px 190px 0px;
+}
+
+.projectorImage {
+	width: 10%;
+	height: 10%;
+	padding: 0px 860px 0px;
+}
+
+.controllerImage {
+	width: 10%;
+	height: 10%;
+	padding: 0px 860px 0px;
+}
+
+.sagamihara {
+	border-radius: 0.9px;
+	overflow: hidden;
+}
+
+.sagamiharaImage {
+	width: 30%;
+	height: 60%;
+	border-radius: 5px;
+	padding: 0px 670px 0px;
+}
+
+.bioContent {
+	width: 100%;
+}
+
+.fesImage {
+	width: 40%;
+	height: 50%;
+	padding: 0px 190px 0px;
+}
+
+.fesPicture {
+	width: 30%;
+	height: 60%;
+	border-radius: 0.3125em;
+	padding: 0px 130px 0px;
+}
+
+.musicFestival {
+	margin: 150px 0px 0px;
+}
+
+.movieList, .gameList {
+	display: inline-block; /*inline-blockにします*/
+	width: 400px;
+	text-align: center;
+	padding: 80px 750px 0px;
+}
+
+.fesList {
+	display: inline-block; /*inline-blockにします*/
+	width: 400px;
+	text-align: center;
+	padding: 30px 130px 0px;
+}
+
+.movieText {
+	display: inline-block; /*inline-blockにします*/
+	width: 200px;
+	text-align: center;
+	margin: 50px 855px 30px;
+}
+
+.gameText {
+	display: inline-block; /*inline-blockにします*/
+	width: 200px;
+	text-align: center;
+	margin: 90px 855px 30px;
+}
+
+.bioTitle, .musicTitle, .cultureTitle {
+	width: 400px;
+	margin: 80px 750px 30px;
+}
+
+.bioList, .daigakuList {
+	display: inline-block; /*inline-blockにします*/
+	width: 200px;
+	text-align: center;
+	margin: 90px 855px 30px;
+}
+
+div {
+	width: 640px;
+	margin: auto;
+	margin: auto;
+}
+
+.fesPicture {
+	width: 60%;
+	height: 60%;
+	border-radius: 0.3125em;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	height: 100%; /*高さを100%にして描画エリアをとる*/
+}
+
+#wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#particles-js {
+	position: fixed; /*描画固定*/
+	z-index: -1; /*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+	background-color: #f5deb3;
+}
+
+#wrapper {
+	position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width: 100%;
+	height: 100%;
+}
+
+#g-nav {
+	/*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+	position: fixed;
+	z-index: 999;
+	/*ナビのスタート位置と形状*/
+	top: -120%;
+	left: 0;
+	width: 100%;
+	height: 100vh; /*ナビの高さ*/
+	background: #ffffe0;
+	/*動き*/
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+	top: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+	/*ナビの数が増えた場合縦スクロール*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100vh; /*表示する高さ*/
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+	/*ナビゲーション天地中央揃え*/
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*リストのレイアウト設定*/
+#g-nav li {
+	list-style: none;
+	text-align: center;
+}
+
+#g-nav li a {
+	color: #333;
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+	position: fixed;
+	z-index: 9999; /*ボタンを最前面に*/
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+/*×に変化*/
+.openbtn span {
+	display: inline-block;
+	transition: all .4s;
+	position: absolute;
+	left: 14px;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #007199;
+	width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+	top: 18px;
+	left: 18px;
+	transform: translateY(6px) rotate(-45deg);
+	width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+	top: 30px;
+	left: 18px;
+	transform: translateY(-6px) rotate(45deg);
+	width: 30%;
+}
